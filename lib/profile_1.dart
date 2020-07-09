@@ -9,6 +9,9 @@ class Profile1 extends StatefulWidget {
 class _Profile1State extends State<Profile1> {
   @override
   Widget build(BuildContext context) {
+
+    Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       body: SingleChildScrollView(
@@ -21,7 +24,7 @@ class _Profile1State extends State<Profile1> {
               children: <Widget>[
 
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.40,
+                  height: size.height * 0.40,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage("assets/images/background1.jpg"), 
@@ -217,7 +220,7 @@ class _Profile1State extends State<Profile1> {
                 ),
 
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.60 - 56,
+                  height: size.height * 0.60 - 56,
                   padding: EdgeInsets.only(left: 16, right: 16, top: 0, bottom: 24,),
                   child: GridView.count(
                     crossAxisCount: 3,
